@@ -304,7 +304,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 👨‍💻 Author
 
-**[Your Name]**
+**Muh Ridwan Sukri**
 - GitHub: [@ridwansukri](https://github.com/ridwansukri)
 - Email: contact@ridwansukri.com
 
