@@ -94,33 +94,33 @@ VideoWhisper memiliki dua mode keamanan:
 
 ```bash
 # Embedded mode (default)
-python videowhisper.py whisper -v kucing.mp4 -m "Pesan rahasia saya"
+python videowhisper.py whisper -v sample_video.mp4 -m "Pesan rahasia saya"
 
 # External mode (private key terpisah)
-python videowhisper.py whisper -v kucing.mp4 -m "Pesan rahasia" -s external
+python videowhisper.py whisper -v sample_video.mp4 -m "Pesan rahasia" -s external
 
 # External mode dengan public key yang sudah ada
-python videowhisper.py whisper -v kucing.mp4 -m "Pesan rahasia" -s external -k public_key.pem
+python videowhisper.py whisper -v sample_video.mp4 -m "Pesan rahasia" -s external -k public_key.pem
 ```
 
 #### 2. Mengekstrak Pesan (Listen)
 
 ```bash
 # Embedded mode (otomatis)
-python videowhisper.py listen -v kucing_whispered.mp4
+python videowhisper.py listen -v sample_video_whispered.mp4
 
 # External mode dengan private key
-python videowhisper.py listen -v kucing_whispered.mp4 -k private_key.pem
+python videowhisper.py listen -v sample_video_whispered.mp4 -k private_key.pem
 
 # External mode dengan prompt interaktif
-python videowhisper.py listen -v kucing_whispered.mp4
+python videowhisper.py listen -v sample_video_whispered.mp4
 # Program akan meminta path ke private key
 ```
 
 #### 3. Membersihkan Video (Silence)
 
 ```bash
-python videowhisper.py silence -v kucing_whispered.mp4 -o kucing_clean.mp4
+python videowhisper.py silence -v sample_video_whispered.mp4 -o sample_video_clean.mp4
 ```
 
 ### 🔐 Skenario Keamanan
@@ -196,14 +196,14 @@ result = vw.listen_to_video(
 ## 🏗️ Struktur File Output
 
 ### Embedded Mode
-- kucing_whispered.mp4 - Video dengan pesan tersembunyi
-- kucing_whispered_public_key.pem - Public key untuk sharing
+- sample_video_whispered.mp4 - Video dengan pesan tersembunyi
+- sample_video_whispered_public_key.pem - Public key untuk sharing
 
 
 ### External Mode
-- kucing_whispered.mp4 - Video dengan pesan tersembunyi
-- kucing_whispered_public_key.pem - Public key untuk sharing
-- kucing_whispered_private_key.pem - Private key untuk dekripsi
+- sample_video_whispered.mp4 - Video dengan pesan tersembunyi
+- sample_video_whispered_public_key.pem - Public key untuk sharing
+- sample_video_whispered_private_key.pem - Private key untuk dekripsi
 
 
 ## 🔐 Keamanan & Best Practices
@@ -252,12 +252,12 @@ source myenv/bin/activate  # Linux/Mac
 # Run comprehensive test
 python videowhisper.py test
 
-# Test manual dengan kucing.mp4
-python videowhisper.py whisper -v kucing.mp4 -m "Test message" -s embedded
-python videowhisper.py listen -v kucing_whispered.mp4
+# Test manual dengan sample_video.mp4
+python videowhisper.py whisper -v sample_video.mp4 -m "Test message" -s embedded
+python videowhisper.py listen -v sample_video_whispered.mp4
 
-python videowhisper.py whisper -v kucing.mp4 -m "Test external" -s external
-python videowhisper.py listen -v kucing_whispered.mp4 -k kucing_whispered_private_key.pem
+python videowhisper.py whisper -v sample_video.mp4 -m "Test external" -s external
+python videowhisper.py listen -v sample_video_whispered.mp4 -k sample_video_whispered_private_key.pem
 ```
 
 ## 🚨 Security Notices
