@@ -51,14 +51,8 @@ coverage.xml
 Thumbs.db
 
 # Project specific
-*.mp4
-*.avi
-*.mkv
-*.mov
-*_whispered.*
-*_silenced.*
-*_public_key.pem
-test_video.bin
+update_guide.md
+update_repository.py
 
 # Backup files
 *.bak
