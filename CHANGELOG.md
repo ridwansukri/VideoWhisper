@@ -1,32 +1,7 @@
-# VideoWhisper v1.3.0 - Changelog
+# VideoWhisper v1.3.1 - Changelog
 
-## 🎉 Major Updates
-
-### ✨ New Features
-
-#### 🖥️ Interactive GUI Interface
-- **Modern GUI** dengan tkinter yang user-friendly
-- **Tab-based interface** untuk Whisper (Hide) dan Listen (Extract)
-- **Drag & drop support** untuk file selection
-- **Real-time capacity checking** dan validasi file
-- **Background processing** untuk operasi yang tidak memblokir UI
-- **Status bar** dengan progress indicator
-
-#### 📁 File Upload Support with LSB Steganography
-- **Support multiple file types**: txt, pdf, doc, docx, jpg, jpeg, png, gif, bmp, mp3, wav, zip, rar, json, xml, csv, xlsx
-- **Hybrid encryption system**: AES-256 untuk data besar + RSA untuk AES key
-- **LSB Steganography**: Embed data dalam pixel video untuk kapasitas yang jauh lebih besar
-- **Auto-detection**: Otomatis pilih RSA-only atau LSB berdasarkan ukuran file
-- **Smart capacity calculation**: Hingga ~10% dari ukuran video untuk LSB mode
-- **File integrity checking** dengan SHA256 checksum
-- **Automatic file extraction** dengan conflict resolution
-
-#### 🔧 Enhanced Core Features
-- **Improved payload system** yang mendukung message dan file
-- **Better capacity calculation** berdasarkan video size dan RSA constraints
-- **Enhanced error handling** dengan user-friendly messages
-- **Backward compatibility** dengan format lama
-- **Auto-generated output paths** untuk kemudahan penggunaan
+- Fixed various bugs
+- Renamed some features
 
 ### 🚀 Usage
 
