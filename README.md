@@ -20,7 +20,7 @@
 
 ## 📖 Description
 
-**VideoWhisper** is an advanced video steganography application that allows you to hide encrypted messages and files within video files. Version 1.3.0 introduces a modern GUI interface and support for hiding various file types using hybrid encryption for maximum compatibility and security.
+**VideoWhisper** is an advanced video steganography application that allows you to hide encrypted messages and files within video files. Version 1.3.1 introduces a modern GUI interface and support for hiding various file types using hybrid encryption for maximum compatibility and security.
 
 ### ✨ Key Features
 
