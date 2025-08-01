@@ -35,7 +35,7 @@ WHISPER_END = b"VIDEOWHISPER_END_v1.3"
 LSB_MARKER = b"VIDEOWHISPER_LSB_v1.3"
 LSB_END = b"VIDEOWHISPER_LSB_END_v1.3"
 KEY_SIZE = 2048
-VERSION = "1.3.0"
+VERSION = "1.3.1"
 MAX_FILE_SIZE_MB = 100  # Increased for LSB mode
 SUPPORTED_FILE_TYPES = [
     '.txt', '.pdf', '.doc', '.docx', '.jpg', '.jpeg', '.png', '.gif', '.bmp',
