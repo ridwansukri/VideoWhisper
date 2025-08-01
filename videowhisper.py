@@ -565,7 +565,7 @@ class VideoWhisper:
                     'timestamp': datetime.now().isoformat(),
                     'security_mode': security_mode,
                     'payload_type': payload_type,
-                    'method': 'HYBRID_APPEND',
+                    'method': 'RSA_AES',
                     'encrypted_aes_key': base64.b64encode(encrypted_aes_key).decode('utf-8'),
                     'checksum': hashlib.sha256(checksum_data).hexdigest(),
                     'original_size': original_size,
@@ -687,7 +687,7 @@ class VideoWhisper:
                 'payload_size': original_size,
                 'whisper_size': whisper_size,
                 'file_size_increase': file_size_increase,
-                'method': 'HYBRID_APPEND' if use_lsb else 'RSA_ONLY',
+                'method': 'RSA_AES' if use_lsb else 'RSA_ONLY',
                 # Detailed statistics
                 'original_video_size': original_video_size,
                 'output_video_size': output_video_size,
@@ -826,7 +826,7 @@ class VideoWhisper:
                 raise ValueError("No private key available for decryption")
             
             # Decrypt payload based on method
-            if is_lsb_mode and whisper_data.get('method') in ['LSB_HYBRID', 'HYBRID_APPEND']:
+            if is_lsb_mode and whisper_data.get('method') in ['LSB_HYBRID', 'RSA_AES']:
                 # Hybrid decryption (AES + RSA)
                 print(f"{Fore.YELLOW}🔓 Decrypting with hybrid method (AES + RSA)...{Style.RESET_ALL}")
                 
@@ -1063,7 +1063,7 @@ class VideoWhisperGUI:
         key_frame = ttk.Frame(security_frame)
         key_frame.pack(fill='x')
         
-        ttk.Label(key_frame, text="Public Key (optional for external mode):").pack(anchor='w')
+        ttk.Label(key_frame, text="Public Key (Leave empty for auto-generate):").pack(anchor='w')
         key_entry_frame = ttk.Frame(key_frame)
         key_entry_frame.pack(fill='x', pady=(5,0))
         

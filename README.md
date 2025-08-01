@@ -1,4 +1,4 @@
-# 🎬 VideoWhisper v1.3.0 - Enhanced Video Steganography
+# 🎬 VideoWhisper v1.3.1 - Enhanced Video Steganography
 
 <div align="center">
   <img src="https://img.shields.io/badge/python-3.7+-blue.svg" alt="Python Version">
@@ -13,15 +13,10 @@
 
 ---
 
-## 🆕 What's New in v1.3.0
+## 🆕 What's New in v1.3.1
 
-- **🖥️ Interactive GUI**: Modern tkinter interface with tabbed design
-- **📁 File Upload Support**: Hide any file type (PDF, images, documents, etc.)
-- **🚀 Hybrid Encryption**: AES-256 + RSA for large files without video corruption
-- **🎯 Auto-Detection**: Automatically choose best encryption method
-- **📊 Detailed Statistics**: Comprehensive file size and efficiency reporting
-- **🔑 Smart Key Management**: Reuse existing keys without regeneration
-- **✅ Video Compatibility**: Videos remain playable after hiding data
+- Fixed various bugs
+- Renamed some features
 
 ## 📖 Description
 
@@ -90,13 +85,36 @@
 
 ### 🖥️ GUI Mode (Recommended)
 
-Launch the interactive GUI:
+**Windows:**
 ```bash
 # Launch GUI directly
 python videowhisper.py
 
-# Or explicitly
+# Or explicitly specify GUI mode
 python videowhisper.py gui
+```
+
+**Linux/macOS:**
+```bash
+# Launch GUI directly
+python3 videowhisper.py
+
+# Or explicitly specify GUI mode  
+python3 videowhisper.py gui
+```
+
+**Alternative (if python3 is aliased as python):**
+```bash
+# Check your Python version first
+python --version
+
+# If it shows Python 3.x, you can use:
+python videowhisper.py
+```
+
+If you encounter display authorization errors, Use sudo (for display access)
+```bash
+sudo python3 videowhisper.py gui
 ```
 
 #### GUI Features:
@@ -323,7 +341,11 @@ Contributions are welcome! Please:
 
 ## 📝 Changelog
 
-### v1.3.0 (Current)
+### v1.3.1 (Current)
+- Fixed various bugs
+- Renamed some features
+
+### v1.3.0
 - ✨ Added interactive GUI interface
 - ✨ File upload support with multiple formats
 - ✨ Hybrid encryption (AES-256 + RSA-2048)
@@ -367,5 +389,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <div align="center">
   <p>Made with ❤️ for Enhanced Security</p>
-  <p><i>VideoWhisper v1.3.0 - Where secrets meet innovation</i></p>
+  <p><i>VideoWhisper v1.3.1 - Where secrets meet innovation</i></p>
 </div>
