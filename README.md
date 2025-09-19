@@ -412,7 +412,6 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ## 🙏 Acknowledgments
 
-- Original theme by [Astro Aria](https://github.com/ccbikai/astro-aria)
 - Icons by [Shields.io](https://shields.io)
 ---
 
